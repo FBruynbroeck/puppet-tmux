@@ -1,10 +1,10 @@
 define tmux::user(
-  $name = undef,
+  $username = undef,
   $autostart = undef
   ) {
-  if $name {
+  if $username {
     if $autostart {
-      tmux::autostart { $name: autostart => $autostart }
+      tmux::autostart { $username: autostart => $autostart }
     }
   }
 }
